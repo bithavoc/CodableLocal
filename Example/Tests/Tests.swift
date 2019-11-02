@@ -4,47 +4,16 @@ import Quick
 import Nimble
 import CodableLocal
 
-class TableOfContentsSpec: QuickSpec {
-    override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
-            }
-        }
+class CodableLocalSpec: QuickSpec {
+  override func spec() {
+    describe("UserDefaults+Codable") {
+      it("can persist and retrieve") {
+        let defaults = UserDefaults.standard
+        expect { try defaults.set(object: UserInfoFixture(userId: "id1"), forKey: "current-user") }.notTo(throwError())
+        var info: UserInfoFixture!
+        expect { info = try defaults.get(objectType: UserInfoFixture.self, forKey: "current-user") }.notTo(throwError())
+        expect(info.userId).to(equal("id1"))
+      }
     }
+  }
 }

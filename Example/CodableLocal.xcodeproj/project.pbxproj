@@ -9,17 +9,19 @@
 /* Begin PBXBuildFile section */
 		1F69997E773400DAFA9A0BAE /* Pods_CodableLocal_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030C518A1CE8C76840124AE1 /* Pods_CodableLocal_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		764B7E1C236DD2C30087A8C1 /* UserInfoFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B7E1B236DD2C30087A8C1 /* UserInfoFixture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01B2FC9EE3CE71142CB0A7CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		01B2FC9EE3CE71142CB0A7CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		030C518A1CE8C76840124AE1 /* Pods_CodableLocal_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodableLocal_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		188C093FCEB637B4709753E1 /* Pods-CodableLocal_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodableLocal_Tests.release.xcconfig"; path = "Target Support Files/Pods-CodableLocal_Tests/Pods-CodableLocal_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1D10EB4E53804DFD1B3A8F16 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1D10EB4E53804DFD1B3A8F16 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* CodableLocal_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodableLocal_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		B0B53DA7F0408107A93AB4D3 /* CodableLocal.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CodableLocal.podspec; path = ../CodableLocal.podspec; sourceTree = "<group>"; };
+		764B7E1B236DD2C30087A8C1 /* UserInfoFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoFixture.swift; sourceTree = "<group>"; };
+		B0B53DA7F0408107A93AB4D3 /* CodableLocal.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CodableLocal.podspec; path = ../CodableLocal.podspec; sourceTree = "<group>"; };
 		C60C9B11B920356A01F06D92 /* Pods-CodableLocal_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodableLocal_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CodableLocal_Tests/Pods-CodableLocal_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				764B7E1B236DD2C30087A8C1 /* UserInfoFixture.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -95,7 +98,6 @@
 				C60C9B11B920356A01F06D92 /* Pods-CodableLocal_Tests.debug.xcconfig */,
 				188C093FCEB637B4709753E1 /* Pods-CodableLocal_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,14 +133,9 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -147,6 +144,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -222,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764B7E1C236DD2C30087A8C1 /* UserInfoFixture.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +345,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodableLocal_Example.app/CodableLocal_Example";
 			};
 			name = Debug;
 		};
@@ -364,7 +362,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodableLocal_Example.app/CodableLocal_Example";
 			};
 			name = Release;
 		};

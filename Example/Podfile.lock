@@ -1,0 +1,27 @@
+PODS:
+  - CodableLocal (0.1.0)
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - CodableLocal (from `../`)
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  CodableLocal:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CodableLocal: 4285d5d19595f9c1782fbcbb8a1dcfdab6022f5e
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: 5ac5d3fbdd7d69ac2e6d144c7d7ca428b9af459f
+
+COCOAPODS: 1.7.5

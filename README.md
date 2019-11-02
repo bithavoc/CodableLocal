@@ -1,15 +1,28 @@
 # CodableLocal
 
-[![CI Status](https://img.shields.io/travis/bithavoc/CodableLocal.svg?style=flat)](https://travis-ci.org/bithavoc/CodableLocal)
 [![Version](https://img.shields.io/cocoapods/v/CodableLocal.svg?style=flat)](https://cocoapods.org/pods/CodableLocal)
 [![License](https://img.shields.io/cocoapods/l/CodableLocal.svg?style=flat)](https://cocoapods.org/pods/CodableLocal)
 [![Platform](https://img.shields.io/cocoapods/p/CodableLocal.svg?style=flat)](https://cocoapods.org/pods/CodableLocal)
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+### `UserDefaults+Codable`
+
+```swift
+struct UserInfo : Codable {
+  let userId: String
+}
+
+...
+
+let defaults = UserDefaults.standard
+try defaults.set(object: UserInfo(userId: "id1"), forKey: "current-user")
+let info = try defaults.get(objectType: UserInfo.self, forKey: "current-user")
+```
 
 ## Requirements
+
+* Swift 5 or above
 
 ## Installation
 
